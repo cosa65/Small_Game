@@ -1,0 +1,6 @@
+grass:resources/grass/grasses32x32.png
+mouse_selection:resources/ui/unit_selection/unit_selection_1.png
+archer_attack:resources/units/archer/attack32x32.png
+archer_fixed:resources/units/archer/fixed32x32.png
+swordsman_attack:resources/units/swordsman/attack32x32.png
+swordsman_fixed:resources/units/swordsman/fixed32x32.png

@@ -1,0 +1,6 @@
+SRPG al estilo Blackguards.
+En C++?
+Tiles.
+Un solo heroe (para empezar).
+Sin armas.
+Un tipo de enemigo.
