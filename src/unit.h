@@ -1,7 +1,8 @@
- #include <iostream>
+#pragma once
+#include <iostream>
 
-#ifndef UNIT_H
-#define UNIT_H
+#define ACTIONS_AMOUNT 5
+#define UNITS_AMOUNT 4
 
 #define ARCHER_NUM 0
 #define SWORDSMAN_NUM 1
@@ -39,5 +40,3 @@ private:
 	int sprite_num_;
 	action_type action_;
 };
-
-#endif

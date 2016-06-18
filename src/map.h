@@ -35,7 +35,7 @@ private:
 		void free_up();
 		bool is_empty();
 		unit *myunit();
-		void move(int xf, int yf);
+		bool move(int xf, int yf);
 		bool attack(int x, int y);
 		int get_atk();
 		int be_attacked(int dmg);

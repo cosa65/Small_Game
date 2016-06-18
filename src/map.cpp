@@ -53,15 +53,17 @@ bool map::move(int xi, int yi, int xf, int yf) {
 
 	unit *umoving = grid[xi][yi].myunit();
 
-	if( grid[xf][yf].occupy(umoving) ) {				//Case final grid position is empty
-		grid[xf][yf].move(xf, yf);
-		grid[xi][yi].free_up();
+	if(grid[xf][yf].is_empty()) {				//Case final grid position is empty
+		if( grid[xi][yi].move(xf, yf) ){
+			grid[xf][yf].occupy(umoving);
+			grid[xi][yi].free_up();
 
-		mouse_x = xf;
-		mouse_y = yf;
-		graphics.update_mouse_selection(xf, yf);
+			mouse_x = xf;
+			mouse_y = yf;
+			graphics.update_mouse_selection(xf, yf);
 
-		return true;
+			return true;
+		}
 	} else {											
 		
 		if(grid[xi][yi].attack(xf,yf)) {						//Case final grid position occupied, (attack)
@@ -90,7 +92,7 @@ bool map::add_unit(int xi, int yi, int type) {
 	return false;
 }
 
-bool map::attack(int xi, int yi, int xf, int yf) {
+bool map::attack(int xi, int yi, int xf, int yf) {			//OLD
 
 	if (grid[xi][yi].attack(xf, yf)) {
 		int attacker_dmg = grid[xi][yi].get_atk();
@@ -184,8 +186,8 @@ unit *map::tile::myunit() {
 	return this->myunit_;
 }
 
-void map::tile::move(int xf, int yf) {
-	myunit_->move(xf, yf);
+bool map::tile::move(int xf, int yf) {
+	return myunit_->move(xf, yf);
 }
 
 bool map::tile::attack(int xf, int yf) {

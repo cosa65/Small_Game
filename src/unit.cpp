@@ -28,11 +28,22 @@ bool unit::attack(int xpos, int ypos) {
 }
 
 bool unit::move(int xf, int yf) {
+
 	if(this->type_ != HORSEMAN_NUM) {
-		this->xpos_ = xf;
-		this->ypos_ = yf;
-		return true;
+		if(abs(this->xpos_ - xf) <= 1 && abs(this->ypos_ - yf) <= 1) {
+			this->xpos_ = xf;
+			this->ypos_ = yf;
+			return true;
+		}
+	} else {
+		if(abs(this->xpos_ - xf) <= 2 && abs(this->ypos_ - yf) <= 2) {
+			this->xpos_ = xf;
+			this->ypos_ = yf;
+			return true;
+		}
 	}
+	return false;
+
 }
 
 bool unit::be_attacked(int dmg) {
