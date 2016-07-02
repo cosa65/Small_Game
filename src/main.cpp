@@ -136,6 +136,7 @@ int main(int argc, char *argv[])
 		if(redraw) {
 			new_map.update_anims();	
 			redraw = false;
+			//al_draw_scaled_bitmap();
 			al_flip_display();
 		}
 	}
