@@ -1,5 +1,5 @@
 CPPFLAGS= -g -std=c++11
-OBJS= src/map.o src/map_graphics.o src/unit_anims.o src/sprite_file.o src/unit.o src/graphics_handler.o
+OBJS= src/main_menu.o src/map.o src/map_graphics.o src/unit_anims.o src/sprite_file.o src/unit.o src/graphics_handler.o
 #src/map_graphics.o
 # LIBALLEGRO = $(pkg-config --libs allegro-5.0 allegro_audio-5.0 allegro_acodec-5.0 allegro_image-5.0 allegro_font-5.0 allegro_color-5.0 allegro_t)
 

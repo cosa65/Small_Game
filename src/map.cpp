@@ -113,11 +113,6 @@ bool map::attack(int xi, int yi, int xf, int yf) {			//OLD
 
 void map::update_anims() {
 
-	/*for(rlist<unit>::r_iterator it = units.begin(); !(it.null()); ++it) {
-		//HOLA, ACA CAMBIO COSITAS DESPUES
-		//(*it).update_sprite(32);
-	}*/
-
 	if(block_input != -1) {
 		block_input--;
 	}

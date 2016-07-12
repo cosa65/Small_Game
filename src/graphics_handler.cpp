@@ -4,9 +4,9 @@ void gphandle::draw_at(ALLEGRO_BITMAP *sprite, int x, int y) {
 	al_draw_bitmap(sprite, (float)x*32, (float)y*32, 0);
 }
 
-ALLEGRO_BITMAP *gphandle::set_frame(ALLEGRO_BITMAP *sprites, int i, int max) {
+ALLEGRO_BITMAP *gphandle::set_frame(ALLEGRO_BITMAP *sprites, int i, int max, int sizex, int sizey) {
 
-	return (al_create_sub_bitmap(sprites,((i)%max)*32,0,32,32));
+	return (al_create_sub_bitmap(sprites,((i)%max)*sizex,0,sizex,sizey));
 }
 
 std::string gphandle::search_for(std::string key, std::string strdirs) {

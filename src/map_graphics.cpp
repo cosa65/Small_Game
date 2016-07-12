@@ -21,7 +21,7 @@ void map_graphics::load_sprite(std::string name, int max) {
 
 	std::string png_location = gphandle::search_for(name, "dirs.txt");
 	ALLEGRO_BITMAP *source_img = al_load_bitmap(png_location.c_str());
-	sprite_file new_spr = sprite_file(name, source_img, max);
+	sprite_file new_spr = sprite_file(name, source_img, max, 32, 32);
 	sprite_files.push_back(new_spr);
 
 }
@@ -29,7 +29,7 @@ void map_graphics::load_sprite(std::string name, int max) {
 void map_graphics::load_mouse_selection(std::string name) {
 	std::string png_location = gphandle::search_for(name, "dirs.txt");
 	ALLEGRO_BITMAP *source_img = al_load_bitmap(png_location.c_str());
-	this -> mouse_selection = sprite_file(name, source_img, 1);
+	this -> mouse_selection = sprite_file(name, source_img, 1, 32, 32);
 }
 
 void map_graphics::update_animations() {

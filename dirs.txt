@@ -1,5 +1,10 @@
 grass:resources/grass/grasses32x32.png
 mouse_selection:resources/ui/unit_selection/unit_selection_1.png
+start_game_unhover:resources/ui/main_menu/boton-iniciar.png
+start_game_hover:resources/ui/main_menu/boton-iniciar-hover.png
+end_game_unhover:resources/ui/main_menu/boton-salir-unhover.png
+end_game_hover:resources/ui/main_menu/boton-salir-hover.png
+main_menu_background:resources/ui/main_menu/main-menu-background.png
 archer_attack:resources/units/archer/attack32x32.png
 archer_fixed:resources/units/archer/fixed32x32.png
 swordsman_attack:resources/units/swordsman/attack32x32.png
